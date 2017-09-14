@@ -21,8 +21,8 @@ app.post('/hello', function(req, res, next) {
     }
 
     if(usrName !== 'slackbot') {
-        return req.status(200).json(botPayLoad);
+        return res.status(200).json(botPayLoad);
     } else {
-        return req.status(200).end();
+        return res.status(200).end();
     }
 })
